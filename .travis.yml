@@ -1,4 +1,8 @@
 sudo: required
+language: python
+
+install:
+  - pip install pytest
 
 services:
   - docker
