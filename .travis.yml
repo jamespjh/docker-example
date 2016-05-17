@@ -3,6 +3,7 @@ language: python
 
 install:
   - pip install pytest
+  - pip install requests
 
 services:
   - docker
