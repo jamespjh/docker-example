@@ -1,6 +1,10 @@
 # Tests require the docker container to be running
 from os import environ
-machine = environ['DOCKER_HOST'].split(':')[1]
+
+if 'DOCKER_HOST' in environ:
+    machine = environ['DOCKER_HOST'].split(':')[1]
+else:
+    machine = "//localhost"
 
 def test_service():
     #connect to the web service
